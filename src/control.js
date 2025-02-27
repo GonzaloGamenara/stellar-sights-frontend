@@ -1,5 +1,5 @@
 
-const countdownLaunchSound = new Audio('assets/countdown-and-launch.mp3'); // Sonido de cuenta regresiva y despegue
+const countdownLaunchSound = new Audio('public/assets/countdown-and-launch.mp3'); // Sonido de cuenta regresiva y despegue
 
 
 
