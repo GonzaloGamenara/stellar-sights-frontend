@@ -12,7 +12,7 @@ let sistemasCargados = false;
 async function obtenerSistemasPlanetarios() {
 
     try {
-        const response = await fetch('http://localhost:3000/api/datos'); // Llamada a tu API
+        const response = await fetch('https://stellar-sights-backend.onrender.com/api/datos'); // Llamada a tu API
         if (!response.ok) throw new Error('Error al obtener los datos');
         
         const data = await response.json(); // Convertir respuesta a JSON
