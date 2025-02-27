@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Stellar Sights</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="styles.css" rel="stylesheet">
+        <link rel="icon" href="assets/favicon.png" type="image/png">
+        <link rel="preload" href="https://fonts.googleapis.com">
+        <link rel="preload" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preload" href="https://fonts.gstatic.com/s/exo/v12/MTP9bu6M_sYXJvybgK4nKl9pFuUlXAGt8oZ6gC7rEVw.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.7.0/css/all.css" crossorigin="anonymous">
+        <script src="control.js" defer></script>
+        <script src="stars.js" defer></script>
+    </head>
+
+
+
+    <body>
+        <canvas id="starCanvas"></canvas> <!--  Inicio  -->
+        <main>
+            <div id="main_div" class="home">
+                <div class="contenedor_sistemas">
+                    <h1 class="titulo">StellarSights</h1>
+                    <p class="sub_titulo">Elije el sistema solar para visitarlo</p>
+                    <div class="div_sistemas">
+                        <ul class="lista_sistemas">
+                            <li class="sistema"><button class="button_s"> <i id="i_button_s" class="fa-solid fa-satellite-dish fa-beat-fade" style="color: #ffffff;"></i></button></li>
+                            <li class="sistema"><button class="button_s"> <i id="i_button_s" class="fa-solid fa-satellite-dish fa-beat-fade" style="color: #ffffff;"></i></button></li>
+                            <li class="sistema"><button class="button_s"><i id="i_button_s" class="fa-solid fa-satellite-dish fa-beat-fade" style="color: #ffffff;"></i></button></li>
+                            <li class="sistema"><button class="button_s"><i id="i_button_s" class="fa-solid fa-satellite-dish fa-beat-fade" style="color: #ffffff;"></i></button></li>
+                            <li class="sistema"><button class="button_s"><i id="i_button_s" class="fa-solid fa-satellite-dish fa-beat-fade" style="color: #ffffff;"></i></button></li>
+                            <li class="sistema"><button class="button_s"><i id="i_button_s" class="fa-solid fa-satellite-dish fa-beat-fade" style="color: #ffffff;"></i></button></li>
+                        </ul>
+                    </div>    
+                </div>
+            </div>
+            <div id="planet_div" class="mostrar_planetas">
+                <div class="parte_superior">
+                    <h1 class="titulo_planetas">StellarSights</h1>
+                    <button id="system_name" class="sistema_solar" onclick="mostrarSistemas()"></button>
+                    <div class="div_datos">
+                        <ul class="ls_datos">
+                            <li class="li_datos"><button id="d_year" class="bt_datos"></button></li>
+                            <li class="li_datos"><button id="mass" class="bt_datos"></button></li>
+                            <li class="li_datos"><button id="orbital_d" class="bt_datos"></button></li>
+                            <li class="li_datos"><button id="distance" class="bt_datos"></button></li>
+                        </ul>
+                    </div>
+                    <h2 id="planet_name" class="nombre_planeta"></h2>
+                </div>
+                <div class="parte_inferior">
+                    <button id="flecha_izquierda" class="flechas_botones"><i id="ico_bt" class="fa-solid fa-left-long" style="color: rgba(255,255,255,0.1);"></i></button>
+                    <img class="img_planeta" src="public/assets/Tierra.png">
+                    <button id="flecha_derecha" class="flechas_botones"><i id="ico_bt" class="fa-solid fa-right-long" style="color: rgba(255,255,255,0.1);"></i></button>
+                </div>
+            </div>
+        </main>
+    </body>
+
+
+
+</html>
+
