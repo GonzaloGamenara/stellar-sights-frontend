@@ -27,6 +27,10 @@ canvas {
     z-index: -1; /* Lo envía al fondo */
 }
 
+body{
+    overflow: hidden;
+}
+
 body,html{
     height: 100vh;
     max-height: 100vh;
