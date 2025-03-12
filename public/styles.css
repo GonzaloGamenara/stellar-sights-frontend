@@ -43,7 +43,25 @@ body,html{
 
 .contenedor_sistemas{
     transition: transform 4s cubic-bezier(1,0,1,0); /* Efecto de despegue     */
-    transform-style: preserve-3d;  
+    transform-style: preserve-3d; 
+}
+
+@media (max-width: 1024px) {
+    .contenedor_sistemas{
+        scale: 0.8;
+    }
+}
+
+@media (max-width: 768px) {
+    .contenedor_sistemas{
+        scale: 0.6;
+    }
+}
+
+@media (max-width: 430px) {
+    .contenedor_sistemas{
+        scale: 0.4;
+    }
 }
 
 .titulo{
@@ -65,6 +83,12 @@ body,html{
     font-weight: 200;
 }
 
+@media (max-width: 430px) {
+    .sub_titulo{
+        font-size: 40px;
+    }
+}
+
 .div_sistemas{
     text-align: center;
     padding: 50px 50px 0px 50px;
@@ -76,6 +100,12 @@ body,html{
     grid-template-columns: repeat(3,1fr);
     color: var(--color-texto);
     gap: 20px;
+}
+
+@media (max-width: 1024px) {
+    .lista_sistemas{
+        grid-template-columns: repeat(2,1fr);
+    }
 }
 
 .sistema{
@@ -99,6 +129,12 @@ body,html{
     color: var(--color-texto);
     background-color: rgba(255,255,255,0.1);
     transition: transform 1s ease;
+}
+
+@media (max-width: 430px) {
+    .button_s{
+        font-size: 30px;
+    }
 }
 
 #i_button_s{
@@ -128,6 +164,15 @@ body,html{
     font-size: 80px;
     margin-top: 50px;
     margin-bottom: 30px;
+    border: 1px red solid; 
+}
+
+@media (max-width: 430px) {
+    .titulo_planetas{
+        font-size: 60px;
+        margin-top:40px;
+        margin-bottom: 10px;
+    }
 }
 
 .sistema_solar{
@@ -143,6 +188,14 @@ body,html{
     transition: all 500ms ease;
 }
 
+@media (max-width: 430px) {
+    .sistema_solar{
+        font-size: 20px;
+        padding:5px 10px 5px 10px;
+        margin-bottom: 10px;
+    }
+}
+
 .sistema_solar:hover{
     background-color: var(--color-texto);
     color: var(--color-fondo);
@@ -153,6 +206,13 @@ body,html{
     margin-bottom: 100px;
 }
 
+@media (max-width: 430px) {
+    .div_datos{
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+}
+
 .ls_datos{
     display: flex;
     text-align: center;
@@ -160,6 +220,15 @@ body,html{
     align-items: center;
     list-style: none;
     gap: 20px;
+}
+
+@media (max-width: 430px) {
+    .ls_datos{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 10px; /* Add padding to create separation from the edges */
+    }
 }
 
 .bt_datos{
@@ -173,9 +242,22 @@ body,html{
     padding: 10px 20px 10px 20px;
 }
 
+@media (max-width: 430px) {
+    .bt_datos{
+        font-size: 20px;
+    }
+}
+
 .nombre_planeta{
     color: var(--color-texto);
     font-size: 40px;
+}
+
+@media (max-width: 430px) {
+    .nombre_planeta{
+        font-size: 30px;
+        margin-top: 10px;
+    }
 }
 
 .parte_inferior{
@@ -183,11 +265,20 @@ body,html{
     justify-content: center;
     gap: 100px;
     margin-top: 30px;
+    border: 1px solid red;
+    overflow: hidden;
 }
+
 
 .img_planeta{
     width: 800px;
     animation: rotation 240s infinite linear;
+}
+
+@media (max-width: 430px) {
+    .img_planeta{
+        width: 400px;
+    }
 }
 
 .flechas_botones{
@@ -197,8 +288,28 @@ body,html{
     margin-bottom: 50px;
 }
 
+@media (max-width: 430px) {
+    .flechas_botones{
+        position: absolute;
+    }
+    #flecha_izquierda{
+        left: 5%;
+        bottom: 40%;
+    }
+    #flecha_derecha{
+        right: 5%;
+        bottom: 40%;
+    }
+}
+
 #ico_bt{
    font-size: 100px;
+}
+
+@media (max-width: 430px) {
+    #ico_bt{
+        font-size: 50px;
+    }
 }
 
 #ico_bt:hover{
