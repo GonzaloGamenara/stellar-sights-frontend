@@ -9,6 +9,7 @@ let indexPlanet = 0; // Índice del planeta
 let currentSystem = null; // Variable global para el sistema actual
 let sistemasCargados = false;
 
+
 async function obtenerSistemasPlanetarios() {
 
     try {
@@ -38,7 +39,7 @@ async function obtenerSistemasPlanetarios() {
             console.log(sistemasCargados);
     } catch (error) {
         console.error(error);
-    }
+    } 
     asignAnimation();
 }
 

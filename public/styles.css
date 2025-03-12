@@ -36,7 +36,6 @@ body,html{
     align-items: center;
     background-color: var(--color-fondo);
     z-index: 0;
-    overflow: hidden;
 }
 
 #main_div{
@@ -257,6 +256,13 @@ body,html{
     }
 }
 
+.div_botones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
 .nombre_planeta{
     color: var(--color-texto);
     font-size: 40px;
@@ -267,6 +273,27 @@ body,html{
         font-size: 30px;
         margin-top: 10px;
     }
+}
+
+.flechas_botones{
+    background:none;
+    box-shadow: none;
+    border: none;
+}
+
+
+#ico_bt{
+   font-size: 50px;
+}
+
+@media (max-width: 430px) {
+    #ico_bt{
+        font-size: 50px;
+    }
+}
+
+#ico_bt:hover{
+    transform: scale(1.1);
 }
 
 .parte_inferior{
@@ -289,41 +316,7 @@ body,html{
     }
 }
 
-.flechas_botones{
-    background:none;
-    box-shadow: none;
-    border: none;
-    margin-bottom: 50px;
-}
 
-@media (max-width: 430px) {
-    .flechas_botones{
-        position: absolute;
-    }
-    #flecha_izquierda{
-        left: 5%;
-        bottom: 40%;
-    }
-    #flecha_derecha{
-        right: 5%;
-        bottom: 40%;
-    }
-}
-
-#ico_bt{
-   font-size: 100px;
-}
-
-@media (max-width: 430px) {
-    #ico_bt{
-        font-size: 50px;
-    }
-}
-
-#ico_bt:hover{
-    color: white;
-    transform: scale(1.1);
-}
 
 
 

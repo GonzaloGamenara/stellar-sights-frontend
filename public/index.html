@@ -12,6 +12,9 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.7.0/css/all.css" crossorigin="anonymous">
         <script src="control.js" defer></script>
         <script src="stars.js" defer></script>
+        <meta name="theme-color" content="#ff5733">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     </head>
 
 
@@ -47,12 +50,14 @@
                             <li class="li_datos"><button id="distance" class="bt_datos"></button></li>
                         </ul>
                     </div>
-                    <h2 id="planet_name" class="nombre_planeta"></h2>
+                    <div class="div_botones">
+                        <button id="flecha_izquierda" class="flechas_botones"><i id="ico_bt" class="fa-solid fa-left-long" style="color: rgba(255,255,255,0.1);"></i></button>
+                        <h2 id="planet_name" class="nombre_planeta"></h2>
+                        <button id="flecha_derecha" class="flechas_botones"><i id="ico_bt" class="fa-solid fa-right-long" style="color: rgba(255,255,255,0.1);"></i></button>    
+                    </div>
                 </div>
-                <div class="parte_inferior">
-                    <button id="flecha_izquierda" class="flechas_botones"><i id="ico_bt" class="fa-solid fa-left-long" style="color: rgba(255,255,255,0.1);"></i></button>
+                <div class="parte_inferior">    
                     <img class="img_planeta" src="assets/Tierra.png">
-                    <button id="flecha_derecha" class="flechas_botones"><i id="ico_bt" class="fa-solid fa-right-long" style="color: rgba(255,255,255,0.1);"></i></button>
                 </div>
             </div>
         </main>
