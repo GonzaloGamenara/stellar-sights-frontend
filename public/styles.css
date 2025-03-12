@@ -164,7 +164,6 @@ body,html{
     font-size: 80px;
     margin-top: 50px;
     margin-bottom: 30px;
-    border: 1px red solid; 
 }
 
 @media (max-width: 430px) {
@@ -265,7 +264,6 @@ body,html{
     justify-content: center;
     gap: 100px;
     margin-top: 30px;
-    border: 1px solid red;
     overflow: hidden;
 }
 
