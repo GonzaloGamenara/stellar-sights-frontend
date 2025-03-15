@@ -95,6 +95,18 @@ body,html{
     }
 }
 
+.aviso{
+    color: var(--color-texto);
+    font-size: clamp(5px, 0.9vw, 30px);
+    text-align: center;
+    margin: 30px auto 10px auto;
+    font-weight: 200;
+    max-width: clamp(200px, 40vw, 1000px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .div_sistemas{
     text-align: center;
     padding: 50px 50px 0px 50px;
