@@ -19,12 +19,30 @@
 
 
     <body>
-        <canvas id="starCanvas"></canvas> 
+        <canvas id="starCanvas"></canvas>
+        <nav class="navbar">
+            <button class="button_navbar"><i class="fa-solid fa-language"></i></button>
+            <div class="language-dropdown">
+                <select id="language-select">
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
+                    <option value="de">Deutsch</option>
+                    <option value="it">Italiano</option>
+                    <option value="pt">Português</option>
+                    <option value="zh">中文</option>
+                </select>
+            </div>
+            <button class="button_navbar"><i class="fa-solid fa-volume-up"></i></button>
+            <input type="range" id="volumen" min="0" max="0.1" step="0.001" value="0.1">
+            <button onclick="" id="button_navbar_config" class="button_navbar"><i class="fa-solid fa-cog"></i></button> 
+            <button id="button_navbar_info" class="button_navbar"><i class="fa-solid fa-info-circle"></i></button>
+            <section id="section_info"><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet, tenetur cum dolorem fugit esse distinctio id quae provident? Laudantium mollitia amet quia blanditiis qui molestias soluta reprehenderit a vero at. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum quo voluptatibus dolores repellat quis deleniti ad perspiciatis repellendus mollitia cumque recusandae, quas optio vitae quisquam sit. Dolore voluptatum atque cum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus mollitia aperiam, error ducimus veniam molestiae, eos sapiente dolore, voluptatem atque natus quisquam! Numquam nihil natus eligendi. Doloremque aspernatur quas cumque!</p></section>
+        </nav>
         <main>
             <div id="main_div" class="home">
                 <div class="contenedor_sistemas">
                     <h1 class="titulo">StellarSights</h1>
-                    <p class="sub_titulo">Elije el sistema solar para visitarlo</p>
+                    <p id="subtitulo_pagina" class="sub_titulo"></p>
                     <div class="div_sistemas">
                         <ul class="lista_sistemas">
                             <li class="sistema"><button class="button_s"> <i id="i_button_s" class="fa-solid fa-satellite-dish fa-beat-fade" style="color: #ffffff;"></i></button></li>

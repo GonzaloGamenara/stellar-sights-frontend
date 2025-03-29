@@ -7,15 +7,152 @@
     --color-texto:white;
 }
 
-
-
-
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     align-items: center;
     font-family: "Exo", serif;
+}
+
+.navbar{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding: 10px 20px;
+    width: auto;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    right: 0;
+    gap: 20px;
+}
+
+.button_navbar{
+    background: none;
+    box-shadow: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 20px;
+    color: var(--color-texto);
+}
+.language-dropdown {
+    display: none; /* Está oculto por defecto */
+    position: static;
+    top: 100%; /* Lo coloca debajo del botón */
+    left: 0;
+    border: none;
+    background-color: white;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+#language-select {
+    padding: 5px;
+    border: none;
+    background-color: white;
+    font-size: 14px;
+    appearance: none; /* Elimina la apariencia nativa del select */
+    background: url('path/to/arrow-icon.png') no-repeat right center;
+    background-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+#language-select:focus option:hover {
+    background-color: green;  /* Color de fondo de la opción seleccionada */
+    color: white; /* Color de texto de la opción seleccionada */
+}
+
+
+#language-select:focus option:checked {
+    background-color: grey;  /* Color de fondo de la opción seleccionada */
+    color: white; /* Color de texto de la opción seleccionada */
+}
+
+.navbar:hover .language-dropdown {
+    display: block; /* Muestra el selector cuando el mouse pasa sobre la navbar */
+}
+
+#button_navbar_config{
+    display: none;
+}
+
+#button_navbar_info:hover + #section_info {
+    display: block; /* Muestra al hacer hover */
+}
+
+#section_info {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 400px;
+    z-index: 1;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    padding: clamp(10px, 1vw, 20px);
+    border-radius: clamp(10px, 1vw, 20px);
+    font-size: clamp(15px, 1.5vw, 25px);
+    display: none;
+    text-align: justify;
+    font-size: clamp(10px, 1vw, 20px);
+    font-weight: 400;
+    line-height: 1.5;
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+}
+
+
+/* Estilos de la barra de volumen */
+#volumen {
+    -webkit-appearance: none;
+    width: 120px; /* Más corto */
+    height: 6px;
+    background: white;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+    visibility: hidden; 
+    position: absolute;
+}
+
+.navbar:hover #volumen {
+    visibility: visible;
+    position: static;
+}
+
+/* Cambio de color al pasar el mouse */
+#volumen:hover {
+    background: white;
+}
+
+/* Estilos del "thumb" (el botón que se mueve) en Chrome y Safari */
+#volumen::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 14px;
+    height: 14px;
+    background: white;
+    border: 2px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+/* Cambio de color cuando se hace clic */
+#volumen::-webkit-slider-thumb:active {
+    background: grey;
+    border: 1px solid white;
+}
+
+/* Estilos del "thumb" en Firefox */
+#volumen::-moz-range-thumb {
+    width: 14px;
+    height: 14px;
+    background: white;
+    border: 2px solid #ff5733;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 canvas {
