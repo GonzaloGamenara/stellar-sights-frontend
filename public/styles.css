@@ -25,14 +25,33 @@
     position: fixed;
     top: 0;
     right: 0;
-    gap: 20px;
+    gap:clamp(10px, 1vw, 20px);
+}
+
+@media (max-width: 430px) {
+    .navbar{
+        width: 100vw;
+        justify-content: center;
+        padding: 10px 0px;
+        justify-content: center;
+        top: 0;
+        right: auto;
+        
+    }
+    .language-dropdown{
+        display: block !important;
+    }
+    #volumen{
+        visibility: visible !important;
+        position: static !important;
+    }
 }
 
 .button_navbar{
     background: none;
     box-shadow: none;
     border: none;
-    font-size: 20px;
+    font-size: clamp(10px, 1vw, 20px);
     cursor: pointer;
     margin-left: 20px;
     color: var(--color-texto);
@@ -43,7 +62,7 @@
     top: 100%; /* Lo coloca debajo del botón */
     left: 0;
     border: none;
-    background-color: white;
+    background-color: rgba(255,255,255,0.1);
     border-radius: 10px;
     z-index: 1;
 }
@@ -51,25 +70,19 @@
 #language-select {
     padding: 5px;
     border: none;
-    background-color: white;
-    font-size: 14px;
+    font-size: clamp(10px, 1vw, 20px);
     appearance: none; /* Elimina la apariencia nativa del select */
     background: url('path/to/arrow-icon.png') no-repeat right center;
     background-size: 1rem;
     font-weight: 600;
     text-align: center;
+    color: white;
 }
 
-#language-select:focus option:hover {
-    background-color: green;  /* Color de fondo de la opción seleccionada */
-    color: white; /* Color de texto de la opción seleccionada */
-}
-
-
-#language-select:focus option:checked {
-    background-color: grey;  /* Color de fondo de la opción seleccionada */
-    color: white; /* Color de texto de la opción seleccionada */
-}
+#language-select option {
+    background: transparent;
+    color: var(--color-fondo);
+  }
 
 .navbar:hover .language-dropdown {
     display: block; /* Muestra el selector cuando el mouse pasa sobre la navbar */
@@ -79,35 +92,44 @@
     display: none;
 }
 
-#button_navbar_info:hover + #section_info {
-    display: block; /* Muestra al hacer hover */
+#button_navbar_info{
+    cursor: pointer;
 }
 
 #section_info {
     position: absolute;
     top: 100%;
     right: 0;
-    width: 400px;
+    width: clamp(200px, 40vw, 500px);
     z-index: 1;
-    background-color: var(--color-fondo);
+    background-color: rgba(255,255,255,0.1);
     color: var(--color-texto);
     padding: clamp(10px, 1vw, 20px);
     border-radius: clamp(10px, 1vw, 20px);
-    font-size: clamp(15px, 1.5vw, 25px);
+    font-size: clamp(13px, 1.3vw, 23px);
     display: none;
     text-align: justify;
-    font-size: clamp(10px, 1vw, 20px);
     font-weight: 400;
     line-height: 1.5;
     word-wrap: break-word; 
     overflow-wrap: break-word;
 }
 
+#section_info.visible{
+    display: block;
+}
+
+@media (max-width: 430px) {
+    #section_info{
+        width: auto !important;
+    }
+}
+
 
 /* Estilos de la barra de volumen */
 #volumen {
     -webkit-appearance: none;
-    width: 120px; /* Más corto */
+    width: 120px;
     height: 6px;
     background: white;
     border-radius: 20px;
@@ -177,7 +199,7 @@ body,html{
     align-items: center;
     background-color: var(--color-fondo);
     z-index: 0;
-}   
+}
 
 #main_div{
     perspective:1000px;
@@ -234,14 +256,20 @@ body,html{
 
 .aviso{
     color: var(--color-texto);
-    font-size: clamp(5px, 0.9vw, 30px);
+    font-size: clamp(10px, 1vw, 20px);
     text-align: center;
     margin: 30px auto 10px auto;
     font-weight: 200;
     max-width: clamp(200px, 40vw, 1000px);
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
+}
+
+@media (max-width: 430px) {
+    .aviso{
+        margin: 10px auto 0 auto;
+    }
 }
 
 .div_sistemas{
@@ -310,6 +338,11 @@ body,html{
 
 #planet_div{
     display: none;
+    background-color: transparent;
+}
+
+#planet_div.active{
+    background-color: grey;
 }
 
 .mostrar_planetas{
@@ -323,39 +356,25 @@ body,html{
 
 .titulo_planetas{
     color: var(--color-texto);
-    font-size: 80px;
-    margin-top: 50px;
-    margin-bottom: 30px;
+    font-size: clamp(40px, 8vw, 80px);
+    margin-top: clamp(60px, 8vw, 80px);
+    margin-bottom: clamp(20px, 3vw, 30px);
 }
 
-@media (max-width: 430px) {
-    .titulo_planetas{
-        font-size: 60px;
-        margin-top:40px;
-        margin-bottom: 10px;
-    }
-}
 
 .sistema_solar{
     background: none;
     box-shadow: none;
     border: var(--color-texto) 1px solid;
-    border-radius: 10px;
-    padding: 5px 20px 5px 20px;
+    border-radius: clamp(10px, 1vw, 20px);
+    padding: clamp(5px, 0.5vw, 10px) clamp(10px, 1vw, 20px);
     color: var(--color-texto);
-    font-size: 30px;
+    font-size: clamp(15px, 2vw, 30px);
     background-color: rgba(255,255,255,0.1);
     cursor: pointer;
     transition: all 500ms ease;
 }
 
-@media (max-width: 430px) {
-    .sistema_solar{
-        font-size: 20px;
-        padding:5px 10px 5px 10px;
-        margin-bottom: 10px;
-    }
-}
 
 .sistema_solar:hover{
     background-color: var(--color-texto);
@@ -363,67 +382,79 @@ body,html{
 }
 
 .div_datos{
-    margin-top: 100px;
-    margin-bottom: 100px;
-}
-
-@media (max-width: 430px) {
-    .div_datos{
-        margin-top: 50px;
-        margin-bottom: 50px;
-    }
-}
-
-.ls_datos{
     display: flex;
-    text-align: center;
-    justify-content:center ;
+    justify-content: center;
     align-items: center;
+    gap: clamp(10px, 2vw, 20px);
+    margin-top: clamp(30px, 8vw, 80px);
+    margin-bottom: clamp(50px, 10vw, 100px);
+}
+
+.ls_datos {
+    display: grid;
     list-style: none;
+    grid-template-columns: repeat(4, auto); /* 4 columnas */
+    grid-template-rows: repeat(2, auto); /* 2 filas */
     gap: 20px;
 }
 
 @media (max-width: 430px) {
     .ls_datos{
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, auto);
         gap: 10px;
-        padding: 10px; /* Add padding to create separation from the edges */
+        padding:5px;
+        margin: 5px;
     }
 }
+
+.config_button {
+    display: none;
+    background: none;
+    box-shadow: none;
+    background-color:rgba(255,255,255,0.1);
+    color: var(--color-texto);
+    font-size: 20px;
+    font-weight:600;
+    padding: 8px;
+    border-radius: 50%; /* Makes the button circular */
+    cursor: pointer;
+    width: 30px; /* Ensures the button is circular */
+    height: 30px; /* Ensures the button is circular */
+    justify-content: center;
+    align-items: center;
+}
+
+.config_button.visible{
+    display: flex;
+}
+
 
 .bt_datos{
     background: none;
     box-shadow: none;
     border: none;
     color: var(--color-texto);
-    font-size: 25px;
+    font-size: clamp(14px, 2vw, 25px);
     background-color: rgba(255,255,255,0.1);
-    border-radius: 10px;
-    padding: 10px 20px 10px 20px;
-}
-
-@media (max-width: 430px) {
-    .bt_datos{
-        font-size: 20px;
-    }
+    border-radius: clamp(10px, 1vw, 20px);
+    padding: clamp(10px, 2vw, 20px);
 }
 
 .div_botones{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 60px;
+    gap: clamp(40px, 5vw, 60px);
 }
 
 .nombre_planeta{
     color: var(--color-texto);
-    font-size: 40px;
+    font-size: clamp(20px, 5vw, 40px);
 }
 
 @media (max-width: 430px) {
     .nombre_planeta{
-        font-size: 30px;
         margin-top: 10px;
     }
 }
@@ -436,14 +467,9 @@ body,html{
 
 
 #ico_bt{
-   font-size: 50px;
+   font-size: clamp(30px, 5vw, 50px);
 }
 
-@media (max-width: 430px) {
-    #ico_bt{
-        font-size: 50px;
-    }
-}
 
 #ico_bt:hover{
     transform: scale(1.1);

@@ -34,8 +34,8 @@
             </div>
             <button class="button_navbar"><i class="fa-solid fa-volume-up"></i></button>
             <input type="range" id="volumen" min="0" max="0.1" step="0.001" value="0.1">
-            <button onclick="" id="button_navbar_config" class="button_navbar"><i class="fa-solid fa-cog"></i></button> 
-            <button id="button_navbar_info" class="button_navbar"><i class="fa-solid fa-info-circle"></i></button>
+            <button onclick="configButton()" id="button_navbar_config" class="button_navbar"><i class="fa-solid fa-cog"></i></button> 
+            <button onclick="info()" id="button_navbar_info" class="button_navbar"><i class="fa-solid fa-info-circle"></i></button>
             <section id="section_info"><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet, tenetur cum dolorem fugit esse distinctio id quae provident? Laudantium mollitia amet quia blanditiis qui molestias soluta reprehenderit a vero at. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laborum quo voluptatibus dolores repellat quis deleniti ad perspiciatis repellendus mollitia cumque recusandae, quas optio vitae quisquam sit. Dolore voluptatum atque cum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus mollitia aperiam, error ducimus veniam molestiae, eos sapiente dolore, voluptatem atque natus quisquam! Numquam nihil natus eligendi. Doloremque aspernatur quas cumque!</p></section>
         </nav>
         <main>
@@ -54,19 +54,25 @@
                         </ul>
                     </div>    
                 </div>
-            </div>
+            </div>         
             <p id="p_aviso" class="aviso">El servidor proxy, alojado en una plataforma gratuita, tarda entre 1 y 2 minutos en activarse desde el modo de suspensión. La página funciona, pero requiere esperar ese tiempo.</p>
             <div id="planet_div" class="mostrar_planetas">
                 <div class="parte_superior">
                     <h1 class="titulo_planetas">StellarSights</h1>
                     <button id="system_name" class="sistema_solar" onclick="mostrarSistemas()"></button>
                     <div class="div_datos">
+                        <button class="config_button" id="config_minus">-</button>
                         <ul class="ls_datos">
                             <li class="li_datos"><button id="d_year" class="bt_datos"></button></li>
                             <li class="li_datos"><button id="mass" class="bt_datos"></button></li>
                             <li class="li_datos"><button id="orbital_d" class="bt_datos"></button></li>
                             <li class="li_datos"><button id="distance" class="bt_datos"></button></li>
+                            <li class="li_datos"><button id="temperature" class="bt_datos"></button></li>
+                            <li class="li_datos"><button id="radius" class="bt_datos"></button></li>
+                            <li class="li_datos"><button id="density" class="bt_datos"></button></li>
+                            <li class="li_datos"><button id="radius_compared_to_star" class="bt_datos"></button></li>
                         </ul>
+                        <button class="config_button" id="config_plus">+</button>
                     </div>
                     <div class="div_botones">
                         <button id="flecha_izquierda" class="flechas_botones"><i id="ico_bt" class="fa-solid fa-left-long" style="color: rgba(255,255,255,0.1);"></i></button>
