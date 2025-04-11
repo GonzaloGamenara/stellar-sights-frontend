@@ -215,7 +215,6 @@ function mostrarPlanetas() {
     document.getElementById("button_navbar_config").style.display = "block";
     document.getElementById("button_navbar_info").style.display = "none";
     planetData(currentSystem, currentSystem.planets[indexPlanet],currentLanguage);
-    info();
 }
 
 // Función para regresar a la vista de sistemas
@@ -385,7 +384,6 @@ function asignAnimation(){
 
 function info(){
     const info = document.getElementById("section_info");
-    
     info.classList.toggle("visible");
 }
 
